@@ -26,10 +26,6 @@ namespace Font2Xaml
                 Console.WriteLine("File is SVG.");
                 SVGFont(args[0]);
             }
-            else if (Path.GetExtension(args[0]) == TTF)
-            {
-                Console.WriteLine("File is TrueType.");
-            }
         }
 
         private static void SVGFont(string path)
