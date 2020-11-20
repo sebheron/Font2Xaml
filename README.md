@@ -1,6 +1,6 @@
 # Font2Xaml
 Found myself needing access to icons for XAML, tried Icon fonts but implementation felt clunky and so I then tried MetroStudio, but soon realised there wasn't enough variety.
-So I've created Font2Xaml to bridge the gap I had and quickly convert an entire font into a resources file for quick implementation into your project.
+Font2Xaml parses the XML SVG fonts into a ResourcesDictionary of DrawingImages wrapped up in a XAML file, this means you technically have unlimited icons you can use, assuming you can find a font for them on the internet.
 
 ### Usage
 1. Download an SVG icon font there's 100s of these which are completely free scattered around the web, but my method is to build a custom font (I use https://fontello.com) and download that.
@@ -10,3 +10,4 @@ So I've created Font2Xaml to bridge the gap I had and quickly convert an entire 
 ### Notes
 - This only works for SVG fonts and SVGs themselves can be imported using other programs.
 - Color is limited to black by default with a thickness of 0.75.
+- Make sure you have permission for the fonts you use.
