@@ -44,15 +44,15 @@ namespace Font2Xaml
                 GeometryDrawing drawing = new GeometryDrawing
                 {
                     Brush = Brushes.Black,
-                    Geometry = Geometry.Parse(data.Value)
+                    Geometry = Geometry.Combine(Geometry.Empty, Geometry.Parse(data.Value), GeometryCombineMode.Union, new ScaleTransform(1, -1))
                 };
-                DrawingImage drawingImage = new DrawingImage(drawing);
 
+                DrawingImage drawingImage = new DrawingImage(drawing);
                 dictionary.Add(name.Value, drawingImage);
             }
 
             using (XmlWriter writer = XmlWriter.Create(Path.Combine(Path.GetDirectoryName(path), $"{Path.GetFileNameWithoutExtension(path)}.xaml"),
-                new XmlWriterSettings { Indent = true, NewLineOnAttributes = true }))
+                new XmlWriterSettings { Indent = true }))
             {
                 XamlDesignerSerializationManager sm = new XamlDesignerSerializationManager(writer);
                 sm.XamlWriterMode = XamlWriterMode.Expression;
