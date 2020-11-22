@@ -24,11 +24,11 @@ namespace Font2Xaml
             }
             else if (args[0] == "help")
             {
-                Console.WriteLine("Font2Xaml\n---------");
-                Console.WriteLine("Usage: Font2Xaml <svg-file-location> <color>...");
-                Console.WriteLine("<svg-file-location> should be the file location of the SVG font.");
-                Console.WriteLine("<color> should be written as a,r,g,b or r,g,b. Each value should be between 0 and 1.");
-                Console.WriteLine("Each <color> will be iterated through according to the amount of characters in the supplied font.");
+                Console.WriteLine("Font2Xaml\n---------"
+                    + "\nUsage: Font2Xaml <svg-file-location> <color>..."
+                    + "\n<svg-file-location> should be the file location of the SVG font."
+                    + "\n<color> should be written as a,r,g,b or r,g,b. Each value should be between 0 and 1."
+                    + "\nEach <color> will be iterated through according to the amount of characters in the supplied font.");
                 return;
             }
             else if (!File.Exists(args[0]))
